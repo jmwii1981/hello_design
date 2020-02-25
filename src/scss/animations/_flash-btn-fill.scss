@@ -1,0 +1,8 @@
+@keyframes flash-btn-fill {
+	from {
+		color: rgba($white, 0);
+	}
+	to {
+		color: rgba($white_off1, 1);
+	}
+}

@@ -1,0 +1,184 @@
+/*
+ *
+ * === FONT ===
+ *
+ *
+ * — Muli —
+ *
+ *
+ * NOTE: A few articles for how to load web fonts and avoid optimization issues:
+ * https://www.freecodecamp.org/news/web-fonts-in-2018-f191a48367e8/
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/unicode-range
+ *
+*/
+
+
+@font-face {
+	font-family: 'Muli';
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-Black/Muli-Black.eot'),
+		 url('../fonts/Muli/Muli-Black/Muli-Black.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-Black/Muli-Black.woff') format('woff'),
+		 url('../fonts/Muli/Muli-Black/Muli-Black.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-Black/Muli-Black.svg#Muli-Black') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-BlackItalic/Muli-BlackItalic.eot'),
+		 url('../fonts/Muli/Muli-BlackItalic/Muli-BlackItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-BlackItalic/Muli-BlackItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-BlackItalic/Muli-BlackItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-BlackItalic/Muli-BlackItalic.svg#Muli-BlackItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-ExtraBold/Muli-ExtraBold.eot'),
+		 url('../fonts/Muli/Muli-ExtraBold/Muli-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-ExtraBold/Muli-ExtraBold.woff') format('woff'),
+		 url('../fonts/Muli/Muli-ExtraBold/Muli-ExtraBold.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-ExtraBold/Muli-ExtraBold.svg#Muli-ExtraBold') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-ExtraBoldItalic/Muli-ExtraBoldItalic.eot'),
+		 url('../fonts/Muli/Muli-ExtraBoldItalic/Muli-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-ExtraBoldItalic/Muli-ExtraBoldItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-ExtraBoldItalic/Muli-ExtraBoldItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-ExtraBoldItalic/Muli-ExtraBoldItalic.svg#Muli-ExtraBoldItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-Bold/Muli-Bold.eot'),
+		 url('../fonts/Muli/Muli-Bold/Muli-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-Bold/Muli-Bold.woff') format('woff'),
+		 url('../fonts/Muli/Muli-Bold/Muli-Bold.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-Bold/Muli-Bold.svg#SFProDisplay-Bold') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-BoldItalic/Muli-BoldItalic.eot'),
+		 url('../fonts/Muli/Muli-BoldItalic/Muli-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-BoldItalic/Muli-BoldItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-BoldItalic/Muli-BoldItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-BoldItalic/Muli-BoldItalic.svg#Muli-BoldItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-SemiBold/Muli-SemiBold.eot'),
+		 url('../fonts/Muli/Muli-SemiBold/Muli-SemiBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-SemiBold/Muli-SemiBold.woff') format('woff'),
+		 url('../fonts/Muli/Muli-SemiBold/Muli-SemiBold.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-SemiBold/Muli-SemiBold.svg#Muli-SemiBold') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-SemiBoldItalic/Muli-SemiBoldItalic.eot'),
+		 url('../fonts/Muli/Muli-SemiBoldItalic/Muli-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-SemiBoldItalic/Muli-SemiBoldItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-SemiBoldItalic/Muli-SemiBoldItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-SemiBoldItalic/Muli-SemiBoldItalic.svg#Muli-SemiBoldItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-Regular/Muli-Regular.eot'),
+		 url('../fonts/Muli/Muli-Regular/Muli-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-Regular/Muli-Regular.woff') format('woff'),
+		 url('../fonts/Muli/Muli-Regular/Muli-Regular.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-Regular/Muli-Regular.svg#Muli-Regular') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-RegularItalic/Muli-RegularItalic.eot'),
+		 url('../fonts/Muli/Muli-RegularItalic/Muli-RegularItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-RegularItalic/Muli-RegularItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-RegularItalic/Muli-RegularItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-RegularItalic/Muli-RegularItalic.svg#Muli-RegularItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-Light/Muli-Light.eot'),
+		 url('../fonts/Muli/Muli-Light/Muli-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-Light/Muli-Light.woff') format('woff'),
+		 url('../fonts/Muli/Muli-Light/Muli-Light.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-Light/Muli-Light.svg#Muli-Light') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-LightItalic/Muli-LightItalic.eot'),
+		 url('../fonts/Muli/Muli-LightItalic/Muli-LightItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-LightItalic/Muli-LightItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-LightItalic/Muli-LightItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-LightItalic/Muli-LightItalic.svg#Muli-LightItalic') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-ExtraLight/Muli-ExtraLight.eot'),
+		 url('../fonts/Muli/Muli-ExtraLight/Muli-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-ExtraLight/Muli-ExtraLight.woff') format('woff'),
+		 url('../fonts/Muli/Muli-ExtraLight/Muli-ExtraLight.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-ExtraLight/Muli-ExtraLight.svg#Muli-ExtraLight') format('svg');
+}
+@font-face {
+	font-family: 'Muli';
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('../fonts/Muli/Muli-ExtraLightItalic/Muli-ExtraLightItalic.eot'),
+		 url('../fonts/Muli/Muli-ExtraLightItalic/Muli-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Muli/Muli-ExtraLightItalic/Muli-ExtraLightItalic.woff') format('woff'),
+		 url('../fonts/Muli/Muli-ExtraLightItalic/Muli-ExtraLightItalic.ttf') format('truetype'),
+		 url('../fonts/Muli/Muli-ExtraLightItalic/Muli-ExtraLightItalic.svg#Muli-ExtraLightItalic') format('svg');
+}

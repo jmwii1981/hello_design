@@ -1,0 +1,29 @@
+/*
+ *
+ * === ALL LAYOUTS/SECTIONS ===
+ *
+ *
+ * — Default Layouts/Sections Styles —
+ *
+ *
+ * NOTE: Default styles used by every layout/section throughout
+ * the site.
+ *
+*/
+
+
+.section {
+	opacity: 0;
+	position: relative;
+	pointer-events: none;
+	transition-property: opacity;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+	z-index: 2;
+
+	&.reveal {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}

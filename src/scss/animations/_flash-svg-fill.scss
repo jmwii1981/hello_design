@@ -1,0 +1,8 @@
+@keyframes flash-svg-fill {
+	from {
+		fill: rgba($white, 0);
+	}
+	to {
+		fill: rgba($white_off1, 1);
+	}
+}

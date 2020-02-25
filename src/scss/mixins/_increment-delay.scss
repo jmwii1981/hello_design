@@ -1,0 +1,10 @@
+// Delay animations incrementally.
+@mixin increment-delay($offset: 0.05s, $count: 10, $delay: 0s, $type: transition) {
+	@for $i from 1 through $count {
+		$time: ($i * $offset) + $delay;
+
+		&:nth-child(#{$i}) {
+			#{$type}-delay: $time;
+		}
+	}
+}

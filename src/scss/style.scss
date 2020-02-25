@@ -1,0 +1,132 @@
+//----------------------------------*\
+// NOTE: The below file @imports
+// are ordered for heirarchy.
+// Changing the oreder of the files
+// may result in unexpected results.
+//----------------------------------*/
+
+//----------------------------------*\
+// CSS RESETS
+//----------------------------------*|
+// This is a useful reset that
+// fixes a lot of issues with styles
+// out of the gate.
+//----------------------------------*/
+@import 'css-resets/normalize';
+
+//----------------------------------*\
+// VENDORS
+//----------------------------------*|
+// Vendor styles are styles usually
+// related to plugins, or other bits
+// of code that are related to third
+// party inclusions in the site.
+// Vendor styles are included
+// at or towards the beginning of
+// a project so that they can be
+// easily overridden and debugged.
+//----------------------------------*/
+// aos settings
+$aos-distance: 200px; // It has to be above import
+// load aos
+@import 'vendors/aos';
+
+//----------------------------------*\
+// BASE (PROJECT'S BOILER PLATE CODE)
+//----------------------------------*|
+// This is the code necessary to
+// to set up all of your styles.
+// Continue to break these up and
+// further organize into their own
+// folders.
+//----------------------------------*/
+@import 'base/vars';
+@import 'base/print';
+@import 'base/site-defaults';
+@import 'base/clearfix';
+@import 'base/layout-defaults';
+
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*|
+// Description.
+//----------------------------------*/
+@import 'mixins/increment-delay';
+
+//----------------------------------*\
+// TYPOGRAPHY
+//----------------------------------*|
+// This is where we pull in fonts,
+// and adjust typography.
+//----------------------------------*/
+@import 'typography/typography';
+@import 'typography/fonts/muli-display';
+@import 'typography/fonts/sf-pro-display';
+
+//----------------------------------*\
+// ACCESSIBILITY TWEAKS
+//----------------------------------*|
+// These styles hide form labels,
+// and find ways to make other
+// aspects of the site accessible.
+//----------------------------------*/
+@import 'accessibility/screen-reader';
+
+//----------------------------------*\
+// ANIMATIONS
+//----------------------------------*|
+// Animations comes before user
+// interactions so that they may
+// be used within user interactions,
+// interfaces, and layouts.
+//----------------------------------*/
+@import 'animations/flash-btn-fill';
+@import 'animations/flash-svg-fill';
+
+//----------------------------------*\
+// USER INTERACTIONS
+//----------------------------------*|
+// User interactions are things like
+// text selection, hovers, clicks,
+// focuses, etc.
+//----------------------------------*/
+@import 'user-interactions/hovers';
+@import 'user-interactions/text-selection';
+
+//----------------------------------*\
+// USER INTERFACES
+//----------------------------------*|
+// User interfaces are things like
+// form elements, buttons, and links,
+// or interfaces that users interact
+// with throughout the site.
+//----------------------------------*/
+@import 'user-interfaces/buttons';
+@import 'user-interfaces/form-elements';
+@import 'user-interfaces/links';
+
+//----------------------------------*\
+// COMPONENTS (SITE/SECTION SPECIFIC)
+//----------------------------------*|
+// Components are parts of the site
+// that can live in different
+// sections of the site and need a
+// lot of its own specific code.
+//----------------------------------*/
+@import 'components/notification';
+@import 'components/search';
+@import 'components/sidebar';
+
+//----------------------------------*\
+// SECTIONS
+//----------------------------------*|
+// Sections are different parts of
+// the site that utilize layout,
+// user interfaces, components,
+// and have user interactions.
+//----------------------------------*/
+@import 'sections/all-sections';
+@import 'sections/header'; // header includes nav
+@import 'sections/hero';
+@import 'sections/portfolio';
+@import 'sections/footer';

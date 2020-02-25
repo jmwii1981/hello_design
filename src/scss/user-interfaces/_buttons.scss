@@ -1,0 +1,122 @@
+/*
+ *
+ * === BUTTON USER INTERFACE ===
+ *
+ *
+ * — Buttons, Buttons Containers —
+ *
+ *
+ * NOTE: Styles for individual buttons and the containers they live in.
+ *
+*/
+
+// Individual buttons.
+.btn {
+	appearance: none;
+	background-color: rgba($black_heathered, 0);
+	border: solid 3px $black_heathered;
+	border-radius: 50px;
+	display: inline-block;
+	margin: 0;
+	padding: 12px 27px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition-property: background-color;
+	transition-delay: 0.24s;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+	white-space: nowrap;
+
+	@media (any-hover: hover) {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: rgba($gray_cobalt, 0.25);
+			transition-property: none;
+		}
+	}
+
+	&:before {
+		background-color: rgba($black_heathered, 0.25);
+		border-radius: 50px;
+		content: '';
+		display: block;
+		pointer-events: none;
+		height: calc(100% + 7px);
+		position: absolute;
+			top: 50%;
+			left: 50%;
+		transition-property: opacity, transform;
+		transition-delay: 0.01s, 0.01s;
+		transition-duration: 0.25s, 0.25s;
+		transition-timing-function: ease-in-out, ease-in;
+		transform: translate3d(-50%, -50%, 0) scale(0);
+		width: calc(100% + 7px);
+	}
+
+	@media (any-hover: hover) {
+		&:hover:before,
+		&:focus:before,
+		&:active:before {
+			background-color: rgba($black_heathered, 1);
+			transform: translate3d(-50%, -50%, 0) scale(1);
+			z-index: 1;
+		}
+	}
+
+	.button-label {
+		color: rgba($black_heathered, 1);
+		display: block;
+		font-family: $sf-pro-display;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.025rem;
+		pointer-events: none;
+		position: relative;
+		transition-property: color;
+		transition-delay: 0s;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-in-out;
+		z-index: 2;
+	}
+
+	@media (any-hover: hover) {
+		&:hover .button-label,
+		&:focus .button-label,
+		&:active .button-label {
+			animation-name: flash-btn-fill;
+			animation-delay: 0s;
+			animation-duration: 0.3s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 1;
+		}
+	}
+}
+
+// Buttons containers.
+.buttons {
+	display: flex;
+	margin-top: 30px;
+	width: 100%;
+
+	&.center {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.btn + .btn {
+		margin-left: 30px;
+	}
+
+	&.center {
+
+		.btn {
+			margin: 0;
+		}
+		.btn + .btn {
+			margin-left: 30px;
+		}
+	}
+}

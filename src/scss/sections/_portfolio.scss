@@ -1,0 +1,154 @@
+/*
+ *
+ * === PORTFOLIO LAYOUT/SECTION ===
+ *
+ *
+ * — Portfolio List —
+ *
+ *
+ * NOTE: Styles for the portfolio layout/section which houses
+ * a list of portfolio items.
+ *
+*/
+
+.section.portfolio {
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: fixed;
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: calc(0% - 0px);
+	transition-property: top, bottom;
+	transition-delay: 0s, 0.6s;
+	transition-duration: 0.3s, 0.3s;
+	transition-timing-function: ease-in, ease-out;
+	width: 100%;
+	z-index: 5;
+
+	&.reveal {
+		opacity: 1;
+			top: 0%;
+			bottom: calc(100% - 10px);
+
+		&.step-1-done {
+			transition-property: bottom;
+			transition-delay: 0s;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-in-out;
+		}
+		&.enlarge-on-hover {
+			bottom: calc(100% - 50px);
+		}
+	}
+
+	.wrapper {
+		height: 100%;
+		padding: 0;
+		max-width: none;
+	}
+
+	.portfolio-list {
+		align-items: stretch;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		pointer-events: none;
+		width: 100%;
+
+		@media (any-hover: hover) {
+			&.hover .portfolio-item,
+			&:hover .portfolio-item,
+			&:focus .portfolio-item,
+			&:active .portfolio-item {
+				flex-grow: 3;
+			}
+			&.hover .portfolio-item:hover,
+			&.hover .portfolio-item.hover,
+			&:hover .portfolio-item:hover,
+			&:focus .portfolio-item:focus,
+			&:active .portfolio-item:active {
+				flex-grow: 30;
+			}
+		}
+	}
+
+	&.reveal.step-1-done .portfolio-list {
+		pointer-events: auto;
+	}
+
+	.portfolio-item {
+		flex-basis: fill;
+		position: relative;
+		transition-property: all;
+		transition-delay: 0s;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+
+		&:nth-child(1) {
+			flex-grow: 3;
+		}
+		&:nth-child(2) {
+			flex-grow: 3;
+		}
+		&:nth-child(3) {
+			flex-grow: 5;
+		}
+		&:nth-child(4) {
+			flex-grow: 5;
+		}
+		&:nth-child(5) {
+			flex-grow: 1;
+		}
+		&:nth-child(6) {
+			flex-grow: 1;
+		}
+		&:nth-child(7) {
+			flex-grow: 2;
+		}
+		&:nth-child(8) {
+			flex-grow: 2;
+		}
+		&:nth-child(9) {
+			flex-grow: 1;
+		}
+		&:nth-child(10) {
+			flex-grow: 2;
+		}
+		&:nth-child(11) {
+			flex-grow: 6;
+		}
+		&:nth-child(12) {
+			flex-grow: 3;
+		}
+		&:nth-child(13) {
+			flex-grow: 11;
+		}
+		&:nth-child(14) {
+			flex-grow: 13;
+		}
+		&:nth-child(15) {
+			flex-grow: 12;
+		}
+		&:nth-child(16) {
+			flex-grow: 22;
+		}
+		&:nth-child(17) {
+			flex-grow: 11;
+		}
+	}
+
+	.portfolio-link {
+		height: 100%;
+		position: absolute;
+			top: 0;
+			left: 0;
+		width: 100%;
+
+		.label {}
+	}
+}
